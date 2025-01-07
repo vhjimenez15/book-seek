@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  web:
+    build: .
+    container_name: django
+    command: >
+      sh -c "python manage.py wait_for_mongodb &&
+             python manage.py initial_data &&
+             python manage.py runserver 0.0.0.0:80"
+    env_file:
+      - ./.envs/.django
+    volumes:
+      - .:/app
+    ports:
+      - "80:80"
+    depends_on:
+      - db
+  db:
+    image: mongo:latest
+    container_name: mongodb
+    # env_file:
+    #   - ./.envs/.mongo
+    ports:
+      - "27017:27017"
