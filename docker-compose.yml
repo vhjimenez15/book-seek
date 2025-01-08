@@ -6,13 +6,13 @@ services:
     command: >
       sh -c "python manage.py wait_for_mongodb &&
              python manage.py initial_data &&
-             python manage.py runserver 0.0.0.0:80"
+             python manage.py runserver 0.0.0.0:8000"
     env_file:
       - ./.envs/.django
     volumes:
       - .:/app
     ports:
-      - "80:80"
+      - "8000:8000"
     depends_on:
       - db
   db:

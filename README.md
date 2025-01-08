@@ -77,8 +77,8 @@ Este proyecto es una prueba técnica que implementa un backend con **Django REST
 
 ### Documentación de APIs
 
-- **Swagger**: [http://localhost:80/swagger/](http://localhost:80/swagger/)
-- **Redoc**: [http://localhost:80/redoc/](http://localhost:80/redoc/)
+- **Swagger**: [http://localhost:8000/swagger/](http://localhost:8000/swagger/)
+- **Redoc**: [http://localhost:8000/redoc/](http://localhost:8000/redoc/)
 
 ### Postman Collection
 
